@@ -18,8 +18,20 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     //atribuindo ao ofertas um array de ofertas vindo do service
-    this.ofertas = this.ofertasService.getOfertas()
-    console.log(this.ofertas)
+    //this.ofertas = this.ofertasService.getOfertas()
+    //console.log(this.ofertas)
+
+    //utilanzando PROMISES
+    this.ofertasService.getOfertas2()
+      .then(( ofertas: Oferta[]) => { 
+        console.log('a função resolve() foi resolvida depois de 3 segundos')
+        this.ofertas = ofertas 
+      
+      })
+      //PROMISE REJECT
+      .catch((param: any ) => { 
+        console.log(param) 
+      })
   }
 
 }
