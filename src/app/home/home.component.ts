@@ -24,8 +24,7 @@ export class HomeComponent implements OnInit {
     //utilanzando PROMISES
     this.ofertasService.getOfertas()
       .then(( ofertas: Oferta[]) => { 
-          this.ofertas = ofertas 
-          console.log(this.ofertas)
+          this.ofertas = ofertas
       })
       //PROMISE REJECT
       .catch((param: any ) => { 
