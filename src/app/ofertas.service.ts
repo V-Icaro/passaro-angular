@@ -2,10 +2,12 @@ import { Oferta } from './shared/oferta.model'
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 
+import { URL_API } from './app.api'
+
 @Injectable()
 export class OfertasService {
 
-    private url_api = 'http://localhost:3000/ofertas'
+    private url_api = URL_API
 
     constructor(private http: HttpClient) {}
 
