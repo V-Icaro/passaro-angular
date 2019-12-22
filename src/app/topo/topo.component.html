@@ -6,6 +6,14 @@
         <img src="../assets/logo.png" />
       </a>
     </div>
+    <div class="col-md-6">
+      <input type="text" 
+        class="form-control" 
+        placeholder="Pesquise por ofertas"
+        #termoPesquisa
+        (keyup)="pesquisa(termoPesquisa.value)"
+        >
+    </div>
     <div class="col-md-2">
       <a routerLink=""><img src="../assets/carrinho.png" /></a>
     </div>
